@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 38,
     backgroundColor: "transparent",
     color: "white",
-    marginTop :10
+    marginTop : 10
   },
   lower: {
     flex: 1,
