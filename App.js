@@ -38,13 +38,14 @@ export default class App extends React.Component {
   };
 
   render() {
-    const { isLoaded, error } = this.state;
+    const { isLoaded, error, temperature, name } = this.state;
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
         {isLoaded ? (
-          <Weather />
-        ) : (
+          <Weather weatherName={name}
+          temp={Math.ceil(temperature - 273.15)} />
+          ) : (
           <View style={styles.loading}>
             <Text style={styles.loadingText}>Getting the Fucking Weather</Text>
             {error ? <Text style={styles.errorText}>{error}</Text> : null}
